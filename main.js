@@ -4,22 +4,23 @@
 
 function max(x, y){
     if(x > y){
-      return true
+      return x;
     }
-    else (x < y)
-      return false
+    else {
+      return y;
+    }
 }
 
 console.log(max(2,4))
 
-// Will need to revisit this question #1 to somehow give me the "result" instead of the true or false value
+// Will need to revisit this question #1 to somehow give me the "result" of a number instead of the true or false value
 
 // 2.
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // Then, write and example of using the function.
 
-function maxOfThree(){
-    // Your answer here
+function maxOfThree(a, b, c){
+
 }
 
 
@@ -65,6 +66,12 @@ function isVowel(char){
 // is the parameter that was passed in.
 // Then, write and example of using the function.
 
+function greet(name){
+  console.log("Hello, " + name + "!");
+}
+
+console.log(greet("Scott"));
+
 
 
 // 9.
@@ -75,3 +82,9 @@ function isVowel(char){
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
 // Then, write and example of using the function.
+
+function madlib(a, b, c, d, e) {
+    console.log("I decided to " + a + " and " + d + " then I will " + b + ", and " + c + " myself into the pit of istanity " + e);
+}
+
+madlib("sleep", "kick", "scream", "sing", "and I can't spell today");

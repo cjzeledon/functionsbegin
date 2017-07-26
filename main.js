@@ -11,9 +11,10 @@ function max(x, y){
     }
 }
 
-console.log(max(2,4))
+console.log(max(2,4));
 
 // Will need to revisit this question #1 to somehow give me the "result" of a number instead of the true or false value
+//And Mike helped me out with this.
 
 // 2.
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
@@ -21,34 +22,78 @@ console.log(max(2,4))
 
 function maxOfThree(a, b, c){
 
+  if(a > b && a > c){
+    return a
+
+  }
+  else if (a > b && b > c){
+    return b
+  }
+  else {
+    return c
+  }
+
 }
 
+console.log(maxOfThree(10, 15, 20));
+console.log(maxOfThree(60,30,77))
 
 // 3.
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 // Then, write and example of using the function.
 
 function isVowel(char){
-    // Your answer here
+    if(char === "a" || char === "e" || char === "i" || char === "o" || char === "u"){
+      return true;
+    }
+    else {
+      return false;
+    }
 }
 
+console.log(isVowel("t"));
+console.log(isVowel("i"));
 
 // 4.
 // Write a function called `sum` that takes two parameters and returns the sum of those 2 numbers.
 // Then, write and example of using the function.
 
+function sum(x, y){
+  return x + y;
+}
+
+console.log(sum(5,5))
 
 
 // 5.
 // Write a function named `avg` that takes 3 parameters and returns the average of those 3 numbers.
 // Then, write and example of using the function.
 
+function avg(a, b, c){
+  let sum = a + b + c;
+  let div = sum / 3;
+  return div
+}
 
+console.log(avg(4,7,10))
 
 // 6.
 // Write a function called `getLength` that takes one parameter (a string) and returns the length
 // Then, write and example of using the function.
 
+function getLength(gotlength){
+  return gotlength.length;
+}
+
+console.log(getLength("The Almighty Dog"));
+
+//or this method could also work
+
+function getLength(gotlength){
+  console.log(gotlength.length)
+}
+
+getLength("The Almighty Dog");
 
 
 // 7.
@@ -57,7 +102,17 @@ function isVowel(char){
 // Otherwise the function should return `false`.
 // Then, write and example of using the function.
 
+function greaterThan(x, y){
+  if(x > y){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
 
+console.log(greaterThan(10,50))
+console.log(greaterThan(80,50))
 
 // 8.
 // Write a function called `greet` that takes a
@@ -84,7 +139,7 @@ console.log(greet("Scott"));
 // Then, write and example of using the function.
 
 function madlib(a, b, c, d, e) {
-    console.log("I decided to " + a + " and " + d + " then I will " + b + ", and " + c + " myself into the pit of istanity " + e);
+    console.log("I decided to " + a + " and " + d + ". Afterward, I will " + b + " and " + c + " myself into the pit of istanity " + e);
 }
 
-madlib("sleep", "kick", "scream", "sing", "and I can't spell today");
+madlib("sleep", "kick", "scream", "sing", "and I really can't spell today and don't even care.");
